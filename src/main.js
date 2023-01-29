@@ -1,10 +1,10 @@
-import robot from 'robotjs'
+import robot from 'robotjs';
 import {GlobalKeyboardListener} from "node-global-key-listener";
 import { createRequire } from "module";
 import chalk from 'chalk';
 
 const require = createRequire(import.meta.url);
-const config = require("../config.json")
+const config = require("../config.json");
 const log = console.log;
 
 log(`
@@ -23,17 +23,32 @@ const v = new GlobalKeyboardListener();
 
 let interval;
 
-v.addListener(function (e, down) {
-    if(e.state.toLocaleLowerCase() === 'down' && e.name.toLocaleLowerCase() === config.startKey.toLocaleLowerCase()) {
+await v.addListener(function (e, down) {
+    const isCtrlActive = (down["LEFT CTRL"] || down["RIGHT CTRL"])
+
+    if(config.isCtrlActive && isCtrlActive !== true) {
+        return;
+    }
+
+    if(
+        e.state.toLocaleLowerCase() === 'down'
+        && e.name.toLocaleLowerCase() === config.startKey.toLocaleLowerCase()
+    ) {
         interval = setInterval(() => robot.mouseClick(config.mouseButton), config.millisecondsBetweenEachClick);
     }
 
-    if(e.state.toLocaleLowerCase() === 'down' && e.name.toLocaleLowerCase() === config.stopKey.toLocaleLowerCase()) {
-        clearInterval(interval)
-        process.exit()
+    if(
+        e.state.toLocaleLowerCase() === 'down'
+        && e.name.toLocaleLowerCase() === config.stopKey.toLocaleLowerCase()
+    ) {
+        clearInterval(interval);
+        process.exit();
     }
 
-    if(e.state.toLocaleLowerCase() === 'down' && e.name.toLocaleLowerCase() === config.pauseKey.toLocaleLowerCase()) {
-        clearInterval(interval)
+    if(
+        e.state.toLocaleLowerCase() === 'down'
+        && e.name.toLocaleLowerCase() === config.pauseKey.toLocaleLowerCase()
+    ) {
+        clearInterval(interval);
     }
 });

@@ -21,12 +21,15 @@ Je ne parvenais pas à lancer mon Bouftou Royal
 
 Edit the `./config.json` file
 
+Set `isCtrlActive` to `true` if you want to start with `CTRL+[START KEY]`
+
 ```json
 {
   "startKey": "s",
   "stopKey": "t",
   "pauseKey": "p",
-  "mouseButton": "right", // options: right, left, center
+  "mouseButton": "right",
+  "isCtrlActive": false,
   "millisecondsBetweenEachClick": 10
 }
 ```
