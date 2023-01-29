@@ -1,0 +1,22 @@
+{
+  "name": "auto-clicker",
+  "version": "1.0.0",
+  "description": "NodeJS Cross platform autoclicker",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "autocliker",
+    "nodejs",
+    "dofus"
+  ],
+  "type": "module",
+  "author": "newQuery",
+  "license": "ISC",
+  "dependencies": {
+    "node-global-key-listener": "^0.1.1",
+    "robotjs": "^0.6.0"
+  }
+}

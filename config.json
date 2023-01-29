@@ -1,0 +1,6 @@
+{
+  "startKey": "s",
+  "stopKey": "t",
+  "pauseKey": "p",
+  "millisecondsBetweenEachClick": 10
+}
