@@ -15,7 +15,7 @@ let interval;
 v.addListener(function (e, down) {
     if(e.state.toLocaleLowerCase() === 'down' && e.name.toLocaleLowerCase() === config.startKey.toLocaleLowerCase()) {
         console.log('[AUTOCLICKER] Starting autoclicker');
-        interval = setInterval(() => robot.mouseClick("right"), 1);
+        interval = setInterval(() => robot.mouseClick(config.mouseButton), 1);
     }
 
     if(e.state.toLocaleLowerCase() === 'down' && e.name.toLocaleLowerCase() === config.stopKey.toLocaleLowerCase()) {

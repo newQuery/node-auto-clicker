@@ -2,5 +2,6 @@
   "startKey": "s",
   "stopKey": "t",
   "pauseKey": "p",
+  "mouseButton": "right",
   "millisecondsBetweenEachClick": 10
 }

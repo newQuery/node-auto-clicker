@@ -22,6 +22,7 @@ La configuration se trouve dans le fichier `config.json` à la racine du projet
   "startKey": "s",
   "stopKey": "t",
   "pauseKey": "p",
+  "mouseButton": "right", // options: right, left, center
   "millisecondsBetweenEachClick": 10
 }
 ```
