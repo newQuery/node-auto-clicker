@@ -12,15 +12,14 @@ Je ne parvenais pas à lancer mon Bouftou Royal
 
 ## Installation
 
-- Avoir Node 18+ d'installer sur la machine
-- Cloner le repository `git clone git@github.com:newQuery/node-auto-clicker.git [PATH du dossier]`
-- Lancer un terminal depuis le dossier
-- Lancer la commande `npm run start`
+- Install [Node 18+](https://nodejs.org/en/)
+- Clone the repository `git clone git@github.com:newQuery/node-auto-clicker.git [PATH du dossier]`
+- Open a terminal 
+- Run `npm run start` from the root folder to run the autoclicker
 
 ## Configuration
 
-La configuration se trouve dans le fichier `config.json` à la racine du projet
-
+Edit the `./config.json` file
 
 ```json
 {
