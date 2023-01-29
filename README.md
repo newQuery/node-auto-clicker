@@ -1,5 +1,10 @@
 # NodeJs Autoclicker
 
+|  | version |
+|--|--|
+| Node | v18.13.0 |
+| NPM | 8.19.3 |
+
 ## Pourquoi ?
 
 Je ne parvenais pas à lancer mon Bouftou Royal
@@ -7,7 +12,7 @@ Je ne parvenais pas à lancer mon Bouftou Royal
 
 ## Installation
 
-- Avoir Node 14+ d'installer sur la machine
+- Avoir Node 18+ d'installer sur la machine
 - Cloner le repository `git clone git@github.com:newQuery/node-auto-clicker.git [PATH du dossier]`
 - Lancer un terminal depuis le dossier
 - Lancer la commande `npm run start`
